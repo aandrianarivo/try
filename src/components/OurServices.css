@@ -1,0 +1,9 @@
+.our-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-container {
+  justify-content: space-around;
+}
