@@ -1,11 +1,19 @@
 import "./AboutUs.css";
 import CardPerso from "./Card/CardPerso";
+import image from "../assets/About us/Our mission 1_EN.png";
+import image2 from "../assets/About us/Our mission_2 EN.png";
+import image3 from "../assets/About us/Our mission_3 EN.png";
+
 export default function AboutUs() {
-  const title = "Our mission 1";
+  const isForArtisant = false;
   const content =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corporis placeat veniam, minus omnis laboriosam tempore accusantium esse eligendi reiciendis quidem, beatae dolorem inventore aliquid! Veniam ducimus eos voluptatibus corporis?";
-  const section = "#PILLAR 1";
-  const mission = "Valorize the artisanal";
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ipsa, non nisi saepe et impedit ipsum eius alias culpa, illum quae, officiis ea iste deleniti nostrum laudantium illo accusantium quos.";
+
+  const cardItems = [
+    { image: image, content: content },
+    { image: image2, content: content },
+    { image: image3, content: content },
+  ];
   return (
     <div className="about-us w-full mt-20">
       <h1 className="text-5xl text-grey-200">About us</h1>
@@ -29,13 +37,15 @@ export default function AboutUs() {
           availability of resources and talent.
         </p>
       </div>
-      <div className="about-us-content">
-        <CardPerso
-          title={title}
-          mission={mission}
-          content={content}
-          section={section}
-        />
+      <div className="about-us-content flex flex-col justify-center items-center">
+        {cardItems.map((item) => (
+          <CardPerso
+            key={item.image}
+            imageurl={item.image}
+            content={item.content}
+            isForArtisant={isForArtisant}
+          />
+        ))}
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { Card } from "primereact/card";
 import "./Card.css";
 export default function CardComponent({ footer, header }) {
   return (
-    <div className="card">
+    <div className="card text-center m-5 w-80 h-80">
       <Card
         title="Advanced Card"
         subTitle="Card subtitle"

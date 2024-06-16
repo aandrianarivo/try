@@ -1,7 +1,7 @@
 import { CgCopyright } from "react-icons/cg";
 function Footer() {
   return (
-    <div className=" bg-stone-700 flex flex-col items-center justify-around py-10">
+    <div className=" bg-black flex flex-col items-center justify-around py-10">
       <div className="flex flex-col items-center">
         <p className="text-stone-100 text-2xl">Subscribe to our emails</p>
         <h5 className="text-stone-100 text-xs py-5 p-3">
